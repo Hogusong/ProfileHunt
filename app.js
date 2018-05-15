@@ -15,6 +15,8 @@ document.addEventListener('keypress', function(e) {
 });
 
 function getProfile(username) {
+  document.querySelector('.profile').style.display = 'none'
+  removeAllChildren('list');
   fetch("https://api.github.com/users/" + username)
     .then( res => res.json())
     .then( j => {
@@ -33,6 +35,8 @@ function showProfile(res) {
   document.getElementById('location').textContent = res.location;
   document.getElementById('bio').textContent = res.bio;
   document.getElementById('count').textContent = res.followers + ' Followers';
+
+  document.querySelector('.profile').style.display = 'block'
 }
 
 function getFollowers(url) {
@@ -44,7 +48,6 @@ function getFollowers(url) {
 }
 
 function showFollowers(followers) {
-  removeAllChildren('list')
   followers.forEach( (follower) => {
     let li = document.createElement('li');
     li.innerHTML = '<img src="' + follower.avatar_url + '" />';

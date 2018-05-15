@@ -14,17 +14,17 @@ h1 {
   padding-top: 80px;
 }
 
-.will {
-  margin-top: 100px;
-}
-
-.loading, .dots {
-  margin-top: 20px;
-}
-
-.will, .loading, .dots {
+.hover, .on-me, .dots {
   color: orange;
   font-size: 22px;
+}
+
+.hover {
+  margin-top: 80px;
+}
+
+.on-me, .dots {
+  margin-top: 30px;
 }
 
 img {
@@ -76,6 +76,58 @@ ul {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   justify-content: center;
+}
+
+.hover:hover {
+  transform: rotateX(1440deg);
+}
+
+.hover, #username, #location, #count {
+  position: relative;
+  animation-name: ltor;
+  animation-duration: 3s;
+  animation-fill-mode: forwards; 
+}
+
+.on-me, #realname, #bio {
+  position: relative;
+  animation-name: rtol;
+  animation-duration: 3s;
+  animation-fill-mode: forwards; 
+}
+
+.dots {
+  position: relative;
+  display: inline-block;
+  animation-name : heading;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+.dots, .hover, .on-me {
+  transition-property: transform;
+  transition-duration: 1s; 
+}
+
+.dots:hover, .hover:hover, .on-me:hover {
+  transform: rotateX(1440deg);
+  transform: rotateY(1440deg);
+  transform: rotate(1440deg);
+}
+
+@keyframes ltor {
+  0% {left: -500px}
+  100% {left: 0}
+}
+
+@keyframes rtol {
+  0% { right: -500px }
+  100% { right: 0 }
+}
+
+@keyframes heading {
+  0% { top: 500px }
+  100% { top: 0 }
 }
 
 @media(max-width: 760px) {
