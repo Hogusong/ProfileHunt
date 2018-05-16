@@ -1,14 +1,17 @@
-document.getElementsByTagName('input')[0].focus();
+DOMinput = document.getElementsByTagName('input')[0];
+DOMoption = document.getElementById('option');
+DOMinput.focus();
+DOMoption.style.display = 'none';
 
 document.getElementById('process').addEventListener('click', function() {
-  var username = document.getElementsByTagName('input')[0].value;
+  var username = DOMinput.value;
   console.log(username);
   getProfile(username)
 });
 
 document.addEventListener('keypress', function(e) {
   if (e.keyCode === 13 || e.which === 13) {
-    var username = document.getElementsByTagName('input')[0].value;
+    var username = DOMinput.value;
     console.log(username);
     getProfile(username)
   }
@@ -24,6 +27,13 @@ function getProfile(username) {
       showProfile(j);
       getFollowers(j.followers_url);
     })
+}
+
+function removeAllChildren(id) {
+  let myNode = document.getElementById(id);
+  while (myNode.firstChild) {
+    myNode.removeChild(myNode.firstChild);
+  }
 }
 
 function showProfile(res) {
@@ -51,13 +61,11 @@ function showFollowers(followers) {
   followers.forEach( (follower) => {
     let li = document.createElement('li');
     li.innerHTML = '<img src="' + follower.avatar_url + '" />';
-    document.getElementById('list').appendChild(li) 
+    li.addEventListener('click', function() {
+      DOMinput.value = follower.login;
+      getProfile(follower.login)
+    });
+    document.getElementById('list').appendChild(li); 
   })
-}
-
-function removeAllChildren(id) {
-  let myNode = document.getElementById(id);
-  while (myNode.firstChild) {
-    myNode.removeChild(myNode.firstChild);
-  }
+  DOMoption.style.display = 'block';
 }

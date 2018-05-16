@@ -10,16 +10,20 @@
   text-align: center;
 }
 
+.profile {
+  height: 300px;
+}
+
 h1 {
   padding-top: 80px;
 }
 
-.hover, .on-me, .dots {
+.hover-me, .on-me, .dots {
   color: orange;
   font-size: 22px;
 }
 
-.hover {
+.hover-me {
   margin-top: 80px;
 }
 
@@ -28,7 +32,7 @@ h1 {
 }
 
 img {
-  width: 7vw;
+  width: 8vw;
   margin: 5px;
 }
 
@@ -69,20 +73,26 @@ p {
 }
 
 ul {
-  position: absolute;
+  /* position: absolute;
   left: 50%;
   top: 480px;
-  transform: translateX(-50%);
+  transform: translateX(-50%); */
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   justify-content: center;
+  list-style-type: none;
+  padding: 60px 25px 10px 25px;
+}
+
+#option {
+  color: rgb(255, 0, 140);
 }
 
 .hover:hover {
   transform: rotateX(1440deg);
 }
 
-.hover, #username, #location, #count {
+.hover-me, #username, #location, #count {
   position: relative;
   animation-name: ltor;
   animation-duration: 3s;
@@ -109,7 +119,7 @@ ul {
   transition-duration: 1s; 
 }
 
-.dots:hover, .hover:hover, .on-me:hover {
+.dots:hover, .hover-me:hover, .on-me:hover {
   transform: rotateX(1440deg);
   transform: rotateY(1440deg);
   transform: rotate(1440deg);
@@ -131,6 +141,7 @@ ul {
 }
 
 @media(max-width: 760px) {
+  .container {  height: 100%; }
   ul {    grid-template-columns: repeat(6, 1fr);  }
   img {    width: 12vw;  }
 }
