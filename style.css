@@ -88,10 +88,6 @@ ul {
   color: rgb(255, 0, 140);
 }
 
-.hover-me:hover {
-  transform: rotateX(1440deg);
-}
-
 .hover-me, #username, #location, #count {
   position: relative;
   animation-name: ltor;
@@ -114,7 +110,7 @@ ul {
   animation-fill-mode: forwards;
 }
 
-.dots, .hover, .on-me {
+.dots, .hover-me, .on-me {
   transition-property: transform;
   transition-duration: 1s; 
 }
