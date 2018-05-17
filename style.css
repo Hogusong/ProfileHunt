@@ -88,7 +88,7 @@ ul {
   color: rgb(255, 0, 140);
 }
 
-.hover:hover {
+.hover-me:hover {
   transform: rotateX(1440deg);
 }
 
