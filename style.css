@@ -10,31 +10,20 @@
   text-align: center;
 }
 
-.profile {
-  height: 300px;
-}
+.profile {  height: 300px;  }
 
-h1 {
-  padding-top: 80px;
-}
+h1 {  padding-top: 80px;  }
 
 .hover-me, .on-me, .dots {
   color: orange;
   font-size: 22px;
 }
 
-.hover-me {
-  margin-top: 80px;
-}
+.hover-me {  margin-top: 80px;  }
 
-.on-me, .dots {
-  margin-top: 30px;
-}
+.on-me, .dots {  margin-top: 30px;  }
 
-img {
-  width: 8vw;
-  margin: 5px;
-}
+img {  width: 8vw;  margin: 5px;  }
 
 .get-info {
   position: absolute;
@@ -44,39 +33,19 @@ img {
   transform: translateX(-50%);
 }
 
-input, button {
-  font-size: 16px;
-  padding: 5px 10px;
-}
+input, button {  font-size: 16px;  padding: 5px 10px; }
 
-button {
-  border-radius: 10px;
-  margin-left: 10px;
-}
+button {  border-radius: 10px;  margin-left: 10px;  }
 
-button:hover {
-  background: darkslategrey;
-  color: white
-}
+button:hover {  background: darkslategrey;  color: white  }
 
-input:focus, button:focus {
-  outline: none;
-}
+input:focus, button:focus {  outline: none; }
 
-#avata {
-  padding: 12px;
-  width: 150px;
-}
+#avata {  padding: 12px;  width: 150px; }
 
-p {
-  margin-bottom: 5px;
-}
+p {  margin-bottom: 5px;  }
 
 ul {
-  /* position: absolute;
-  left: 50%;
-  top: 480px;
-  transform: translateX(-50%); */
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   justify-content: center;
@@ -84,9 +53,7 @@ ul {
   padding: 60px 25px 10px 25px;
 }
 
-#option {
-  color: rgb(255, 0, 140);
-}
+#option {  color: rgb(255, 0, 140); }
 
 .hover-me, #username, #location, #count {
   position: relative;
@@ -141,5 +108,4 @@ ul {
   ul {    grid-template-columns: repeat(6, 1fr);  }
   img {    width: 12vw;  }
 }
-
 
